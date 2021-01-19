@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 420px;
+    font-size: 14px;
+    position: relative;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.timeline-content {
+    display: grid;
+    justify-content: end;
+    align-content: end;
+    align-items: end;
+    flex-grow: 1;
+    padding: 15px 20px 120px 30px;
+    background-image: url('../img/background.png');
+}
+
+.timeline-form {
+    padding: 25px 20px;
+    background-color: #2992d8;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.timeline-form-input, .widget-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 16px;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+
+}
+
+.timeline-form-input::placeholder, .widget-input::placeholder {
+    color: #cccccc;
+}
+
+.timeline-form-input:focus, .widget-input:focus {
+    border-color: #e5e90ce8;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.timeline-note {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    max-width: 425px;
+}
+
+.timeline-note-text {
+    margin: 0;
+}
+
+.timeline-note-time {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: gray;
+    align-self: flex-end;
+
+}
+
+.timeline-note-geolocation {
+    font-size: 12px;
+    line-height: 16px;
+    color:gray;
+    margin-top: 8px;
+}
+
+.timeline-note + .timeline-note {
+    margin-top: 12px;
+}
+
+.timeline-note-button {
+    position: absolute;
+    border: none;
+    width: 20px;
+    height: 20px;
+    top: -5px;
+    right: -5px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+
+.timeline-note:hover .timeline-note-button,
+.timeline-note:focus .timeline-note-button {
+    visibility: visible;
+}
+
+.timeline-note:focus-within .timeline-note-button {
+    visibility: visible;
+}
+
+.timeline-note-button:hover {
+    color: red;
+}
+
+.widget-error {
+    width: 400px;
+    padding: 0 15px 15px;
+    color: #ffffff;
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    
+    background-color:#2892d8;
+}
+
+.widget-error h2 {
+    color: #ffffff;
+}
+
+
+.btn-container {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.btn {
+    padding: 9px 20px;
+    color: #fff;
+    background-color: rgb(19, 112, 233);
+    border: 2px solid transparent;
+    user-select: none;
+    outline: none;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #babd00;
+    
+}
+
+
